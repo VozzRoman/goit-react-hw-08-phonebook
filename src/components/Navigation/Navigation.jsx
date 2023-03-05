@@ -1,8 +1,10 @@
+import { useAuth } from 'hooks/useAuth';
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Nav, NavA, NavItem, NavList } from './Navigation.styled';
 
 const Navigation = () => {
+	const {isLoggedIn} = useAuth();
   return (
 	 <Nav>
 		<NavList>
@@ -10,7 +12,7 @@ const Navigation = () => {
 				<NavA to="/">Home</NavA>
 			</NavItem>
 			<NavItem>
-				<NavA to="/contacts">Contacts</NavA>
+				{isLoggedIn && <NavA to="/contacts">Contacts</NavA>}
 			</NavItem>
 		</NavList>
 		

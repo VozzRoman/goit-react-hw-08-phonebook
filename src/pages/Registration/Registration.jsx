@@ -2,10 +2,13 @@ import { Button, EnterName, FildName, Forms } from 'components/ContactForm/Conta
 import { Box } from 'components/Container/Box';
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { registr } from 'redux/auth/operations';
 
 
 
 const Registration = () => {
+	const dispatch = useDispatch();
 
 	const {
 	  register,
@@ -19,6 +22,12 @@ const Registration = () => {
 	  console.log(data.username);
 	  console.log(data.email);
 	  console.log(data.password);
+	  dispatch(registr({
+		name: data.username,
+		email: data.email,
+		password: data.password
+	  }
+	));
 	//   const { name, phone } = data;
 	//   console.log(name, phone);
 	//   if (contacts.find(item => item.name === name)) {

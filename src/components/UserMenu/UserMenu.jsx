@@ -1,14 +1,17 @@
+import { useAuth } from 'hooks/useAuth'
 import React from 'react'
+import { LogButtton, LogOut, LogText } from './UserName.styled';
 
 const UserMenu = () => {
+	const {user} = useAuth();
   return (
 	 <div>
-		   <div>
-      <p >Welcome</p>
-      <button type="button">
+		<LogOut>
+      <LogText >Welcome: <span>{user.name}</span></LogText>
+      <LogButtton type="button">
         Logout
-      </button>
-    </div>
+      </LogButtton>
+    </LogOut>
 	 </div>
   )
 }
