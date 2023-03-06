@@ -6,10 +6,10 @@ const AuthNav = () => {
 	<Nav>
 	<NavList>
 		<NavItem>
-			<NavA to="/register">Registration</NavA>
+			<NavA to="/register">Sign up</NavA>
 		</NavItem>
 		<NavItem>
-			<NavA to="/login">Login</NavA>
+			<NavA to="/login">Log in</NavA>
 		</NavItem>
 	</NavList>
 	

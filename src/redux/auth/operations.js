@@ -41,7 +41,7 @@ export const logIn = createAsyncThunk('auth/login', async (credential, thunkAPI)
 
 	}catch (error){
 		console.log(error)
-		return thunkAPI.rejectWithValue(error.message);
+		return thunkAPI.rejectWithValue(alert('Wrong login or password'));
 	}
 });
 

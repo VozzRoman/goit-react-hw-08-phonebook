@@ -18,10 +18,11 @@ const ContactsPage = () => {
 		dispatch(fetchContacts());
 	}, [dispatch]);
   return (
+	<div style={{padding: '10px'}}>
 	<Box
 	m="0 auto"
 	maxWidth="500px"
-	background="orange"
+	background="rgb(255, 165, 0, 0.8)"
 	borderRadius="12px"
 	p="20px"
 	boxShadow="3px 4px 6px #888888">
@@ -33,7 +34,7 @@ const ContactsPage = () => {
 	  <ContactList />
 
 	</Box>
-
+	</div>
   )
 }
 

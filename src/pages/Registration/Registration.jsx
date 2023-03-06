@@ -14,7 +14,7 @@ const Registration = () => {
 	  register,
 	  handleSubmit,
 	  reset,
-	  formState: { errors },
+	  formState: { errors, isValid },
 	} = useForm({
 	  mode: 'all',
 	});
@@ -39,6 +39,7 @@ const Registration = () => {
 		reset();
 	};
   return (
+	<div style={{padding: "15px"}}>
 	 <Box
 	 m="0 auto"
 	maxWidth="500px"
@@ -76,6 +77,10 @@ const Registration = () => {
           <EnterName
             {...register('email', {
               required: 'please enter email',
+				  pattern: {
+					value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+					message: 'incorrect mail form',
+				  }
    
             })}
             id="email"
@@ -94,13 +99,10 @@ const Registration = () => {
           <EnterName
             {...register('password', {
               required: 'enter password',
-            //   pattern: {
-            //     value: /\d{3}[-]\d{2}[-]\d{2}/,
-            //     message:
-            //       'Password number must be digits and can contain spaces, dashes, parentheses',
-            //   },
-            //   maxLength: 9,
-            //   message: 'Password number has 7 digits',
+					minLength: {
+						value: 6,
+						message: 'not less then 6 numbers',
+					}
             })}
             id="password"
             type="password"
@@ -111,12 +113,13 @@ const Registration = () => {
 		  <span style={{ display: 'block', marginBottom: 5, color: 'red' }}>
             {errors?.password?.message }
           </span>
-        <Button type="submit">
-         Regiter
+        <Button type="submit" disabled={!isValid}>
+         Sign up
         </Button>
       </Forms>
 		
 	 </Box>
+	 </div>
   )
 }
 
