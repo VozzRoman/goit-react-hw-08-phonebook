@@ -4,7 +4,7 @@ import Navigation from 'components/Navigation/Navigation';
 import UserMenu from 'components/UserMenu/UserMenu';
 import { useAuth } from 'hooks/useAuth';
 import React from 'react';
-import { Outlet } from 'react-router';
+
 import { Header } from './AppBar.styled';
 
 const AppBar = () => {

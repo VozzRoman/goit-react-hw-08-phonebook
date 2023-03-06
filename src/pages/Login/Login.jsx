@@ -2,19 +2,27 @@ import { Button, EnterName, FildName, Forms } from 'components/ContactForm/Conta
 import { Box } from 'components/Container/Box';
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/auth/operations';
 
 const Login = () => {
+	const dispatch = useDispatch();
 	const {
 		register,
 		handleSubmit,
 		reset,
-		formState: { errors, isValid },
+		formState: { errors},
 	 } = useForm({
 		mode: 'all',
 	 });
 	 const onRegSubmit = data => {
 		console.log(data.email);
 		console.log(data.password);
+		dispatch(logIn({
+			email: data.email,
+			password: data.password, 
+		}))
+		reset();
 	 //   const { name, phone } = data;
 	 //   console.log(name, phone);
 	 //   if (contacts.find(item => item.name === name)) {

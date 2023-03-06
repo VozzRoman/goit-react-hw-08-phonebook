@@ -19,13 +19,13 @@ export const ContactForm = () => {
   });
   const onFormSubmit = data => {
     console.log(data.name);
-    console.log(data.phone);
-    const { name, phone } = data;
-    console.log(name, phone);
+    console.log(data.number);
+    const { name, number } = data;
+    console.log(name, number);
     if (contacts.find(item => item.name === name)) {
       return alert('this name alredy exist');
     }
-    if (contacts.find(item => item.phone === phone)) {
+    if (contacts.find(item => item.number === number)) {
       return alert('this number alredy exist');
     }
 
@@ -59,10 +59,10 @@ export const ContactForm = () => {
             {errors?.name?.message || 'Error'}
           </span>
         )}
-        <FildName htmlFor="phone">
+        <FildName htmlFor="number">
           Number
           <EnterName
-            {...register('phone', {
+            {...register('number', {
               required: 'please enter phone number',
               pattern: {
                 value: /\d{3}[-]\d{2}[-]\d{2}/,
@@ -72,15 +72,15 @@ export const ContactForm = () => {
               maxLength: 9,
               message: 'phone number has 7 digits',
             })}
-            id="phone"
+            id="number"
             type="tel"
-            name="phone"
+            name="number"
             placeholder="345-90-90"
           />
         </FildName>
-        {errors?.phone && (
+        {errors?.number && (
           <span style={{ display: 'block', marginBottom: 5, color: 'red' }}>
-            {errors?.phone?.message || 'phone number has 7 digits'}
+            {errors?.number?.message || 'phone number has 7 digits'}
           </span>
         )}
         <Button type="submit" disabled={!isValid}>

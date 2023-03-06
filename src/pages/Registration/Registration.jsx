@@ -14,7 +14,7 @@ const Registration = () => {
 	  register,
 	  handleSubmit,
 	  reset,
-	  formState: { errors, isValid },
+	  formState: { errors },
 	} = useForm({
 	  mode: 'all',
 	});
@@ -28,7 +28,7 @@ const Registration = () => {
 		password: data.password
 	  }
 	));
-	//   const { name, phone } = data;
+	//   const { name, username } = data;
 	//   console.log(name, phone);
 	//   if (contacts.find(item => item.name === name)) {
 	// 	 return alert('this name alredy exist');
