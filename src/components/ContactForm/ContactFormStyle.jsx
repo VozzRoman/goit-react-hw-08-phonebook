@@ -52,6 +52,7 @@ export const Button = styled.button`
 		background-color: transparent;
 		border: 2px solid #ff993f;
 		color: wheat;
+		
 	}
 	
 `

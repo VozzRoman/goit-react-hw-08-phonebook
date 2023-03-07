@@ -23,7 +23,7 @@ export const CoverText = styled.h1`
   color: white;
   text-align: center;
   max-width: 400px;
-  margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   text-shadow: 3px 2px 4px #101010;
 `;
