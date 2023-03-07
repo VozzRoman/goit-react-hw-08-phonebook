@@ -4,7 +4,7 @@ import {
 } from 'components/ContcatList/ContactListStyle';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations/operations';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -22,8 +22,8 @@ export const ContactItem = ({ name, number, id }) => {
   );
 };
 
-// ContactItem.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   phone: PropTypes.string.isRequired,
-//   id: PropTypes.string.isRequired,
-// };
+ContactItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};

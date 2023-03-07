@@ -1,37 +1,36 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const NavList = styled.ul`
-	display: flex;
-
-
-
-`
+  display: flex;
+`;
 export const NavItem = styled.li`
-display: block;
-
-		&:not(:last-child){
-		margin-right: 10px;
-	}
-
+  display: block;
+  display: flex;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 `;
 
 export const NavA = styled(NavLink)`
-	text-decoration: none;
-	color: black;
-	font-weight: 600;
-font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 250ms linear;
 
-&.active {
-	color: orange;
-}
-&:hover{
-	color: #ffaf1b;
-}
-
+  &.active {
+    color: #ffaf1b;
+    border: 2px solid #ffba3b;
+    border-radius: 10px;
+  }
+  &:hover {
+    color: #ff911b;
+  }
 `;
 
-export const Nav = styled.nav`
-
-
-`
+export const Nav = styled.nav``;

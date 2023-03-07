@@ -14,7 +14,7 @@ const UserMenu = () => {
   return (
 	 <div>
 		<LogOut>
-      <LogText >Welcome: <span>{user.name}</span></LogText>
+      <LogText >Welcome: <span>{user.email}</span></LogText>
       <LogButtton type="button" onClick={() => dispatch(logOut())}>
         Logout
       </LogButtton>

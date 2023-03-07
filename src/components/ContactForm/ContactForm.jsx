@@ -87,7 +87,7 @@ export const ContactForm = () => {
           Add contact
         </Button>
       </Forms>
-      {!contacts.length ? <h2>The phonebook is empty</h2> : <h2>Contacts</h2>}
+      {!contacts.length ? <h2 style={{fontSize: '18px'}}>The phonebook is empty</h2> : <h2 style={{fontSize: '20px'}}>Contacts</h2>}
     </>
   );
 };

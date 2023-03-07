@@ -24,30 +24,34 @@ export const EnterName = styled.input`
 
 export const FildName = styled.label`
 	margin-top: 40px;
-	font-size: 19px;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: 500;
+	color: #232323;
 
 `
 
 export const Button = styled.button`
 	cursor: pointer;
 	display: flex;
-	width: 200px;
+	padding: 0 10px;
 	justify-content: center;
 	align-items: center;
-	height: 30px;
-	border-radius: 4px;
+	padding: 5px 15px;
+	border-radius: 10px;
 	margin-top: 30px;
 	font-size: 16px;
+	border: 2px solid #fa8f31;
 	font-weight: 600;
-	background-color: #5959ff;
+	background-color: #fa8f31;
 	color: white;
 	transition: background-color 250ms linear;
 	&:hover, :focus{
-		background-color: gray;
+		background-color: #fd7c0b;
 	}
 	&:disabled{
-		background-color: #9393ff;
+		background-color: transparent;
+		border: 2px solid #ff993f;
+		color: wheat;
 	}
 	
 `

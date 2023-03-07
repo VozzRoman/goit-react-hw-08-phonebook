@@ -26,7 +26,7 @@ const ContactsPage = () => {
 	borderRadius="12px"
 	p="20px"
 	boxShadow="3px 4px 6px #888888">
-		<h1>Phonebook</h1>
+
 	<ContactForm /> 
 	  <Filter />
 	  {isLoading && <Loader/>}

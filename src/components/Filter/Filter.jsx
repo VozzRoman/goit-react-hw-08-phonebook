@@ -16,7 +16,7 @@ export const Filter = () => {
       Find contacts
       <EnterName
         onChange={onChangeHandle}
-        placeholder="Find contacts"
+        placeholder="search"
         type="text"
       />
     </FildName>

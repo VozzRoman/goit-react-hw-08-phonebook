@@ -42,7 +42,6 @@ const Login = () => {
   borderRadius="12px"
   p="20px"
   boxShadow="3px 4px 3px #888888">
-	  <h1>Login</h1>
 		<Forms onSubmit={handleSubmit(onRegSubmit)}>
 		 <FildName htmlFor="email">
 			Email

@@ -8,6 +8,7 @@ export const ButtonContact = styled.button`
   border-radius: 4px;
   color: black;
   font-weight: 600;
+  border: none;
   transition: background-color 250ms linear;
   &:hover,
   :focus {
